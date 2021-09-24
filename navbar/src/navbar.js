@@ -1,6 +1,9 @@
+
+import * as singleSpa from 'single-spa';
+
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as singleSpa from 'single-spa';
+
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
@@ -8,7 +11,14 @@ import Typography from '@material-ui/core/Typography';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
 function TabPanel(props) {
+  
   const { children, value, index, ...other } = props;
 
   return (
@@ -28,13 +38,8 @@ function TabPanel(props) {
   );
 }
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
-
 function a11yProps(index) {
+
   return {
     id: `simple-tab-${index}`,
     'aria-controls': `simple-tabpanel-${index}`,
@@ -49,10 +54,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SimpleTabs() {
+
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
+
     setValue(newValue);
 
     switch (newValue) {
@@ -79,12 +86,9 @@ export default function SimpleTabs() {
           <Tab label="App2" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0} >
-      </TabPanel>
-      <TabPanel value={value} index={1} >
-      </TabPanel>
-      <TabPanel value={value} index={2} >
-      </TabPanel>
+      <TabPanel value={value} index={0} ></TabPanel>
+      <TabPanel value={value} index={1} ></TabPanel>
+      <TabPanel value={value} index={2} ></TabPanel>
     </div>
   );
 }

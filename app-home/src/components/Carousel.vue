@@ -4,16 +4,7 @@
       <div class="item">
         <img
           class="item__image"
-          src="../images/capa.png"
-          alt=""
-        />
-      </div>
-    </el-carousel-item>
-    <el-carousel-item>
-      <div class="item">
-        <img
-          class="item__image_zenvia"
-          src="https://zenvia-static.s3.amazonaws.com/zenvia_banner_v2.png"
+          src="../images/capa2.jpeg"
           alt=""
         />
       </div>
@@ -21,6 +12,7 @@
   </el-carousel>
 </template>
 <style>
+
 .item {
   position: relative;
   height: 100%;
@@ -52,9 +44,11 @@
 
 .el-carousel__item:nth-child(2n) {
   background-color: #99a9bf;
+  padding: 35px;
 }
 
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
+  padding: 35px;
 }
 </style>

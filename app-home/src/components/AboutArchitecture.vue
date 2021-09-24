@@ -113,6 +113,10 @@
     background-color: #000000;
     color:#FFFFFF;
   }
+  .el-card__body{
+    min-height: 420px;
+    margin-bottom: 30px;
+  }
 
   .item__image {
     width: 100%;

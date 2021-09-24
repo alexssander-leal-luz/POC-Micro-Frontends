@@ -11,6 +11,7 @@
 <style>
 .about {
   text-align: center;
+  margin: 30px;
 }
 
 
